@@ -5,59 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add product</title>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-            font-family:sans-serif;
-        }
-        main{
-            padding: 1rem;
-        }
-.main-header{
-    width: 100%;
-    height: 3.5rem;
-    background-color: rgb(201, 173, 14);
-    padding: 0 1.5rem;
-}
-.main-header_nav{
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.main-header_item-list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.main-header_item{
-    margin: 0 1rem;
-    padding: 0;
-}
-.main-header_item a{
-    text-decoration: none;
-    color: black;
-}
-.main-header_item a:hover,
-.main-header_item a:active,
-.main-header_item a.active{
-    color: rgb(63, 39, 201);
-}
-    </style>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/product.css">
 </head>
 <body>
     <header class="main-header">
         <nav class="main-header_nav">
             <ul class="main-header_item-list">
-                <li class="main-header_item"><a class="active" href="/"> product</a></li>
-                <li class="main-header_item"><a href="/add-product">shop</a></li>
+                <li class="main-header_item"><a  class="active" href="/"> product</a></li>
+                <li class="main-header_item"><a   href="/shop">shop</a></li>
+                <li class="main-header_item"><a  class="active" href="/contat"> contact us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <form action="/admin/add-product" method="POST">
-            <input type="text" name="title">
+        <form  class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
             <button type="submit">submit</button>
         </form>
     </main>
